@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/views/dashboard.dart';
 
 import 'package:get/get.dart';
 
@@ -86,19 +87,24 @@ class Login_page extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Container(
-                        height: 50,
-                        width: 200,
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Center(
-                          child: Text(
-                            "Login",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.w700),
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(Dashboard_Page());
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 200,
+                          decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Center(
+                            child: Text(
+                              "Login",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w700),
+                            ),
                           ),
                         ),
                       ),

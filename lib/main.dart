@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Login.dart';
-import 'package:flutter_application_1/get_started.dart';
+
 import 'package:get/get.dart';
+
+import 'views/get_started.dart';
 
 void main() {
   runApp(const MyApp());
