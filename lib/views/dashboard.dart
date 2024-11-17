@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/views/calendar.dart';
 import 'package:get/get.dart';
 
 class Dashboard_Page extends StatelessWidget {
@@ -46,9 +47,14 @@ class Dashboard_Page extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 32, fontWeight: FontWeight.bold),
                       ),
-                      Icon(
-                        Icons.arrow_drop_down,
-                        size: 32,
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(Calendar_Page());
+                        },
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          size: 32,
+                        ),
                       )
                     ],
                   ),
