@@ -35,7 +35,7 @@ class Calendar_Page extends StatelessWidget {
                           Expanded(child: SizedBox()),
                           GestureDetector(
                               onTap: () {
-                                Get.to(AddEvent_Page());
+                                Get.to(AddAppointmentScreen());
                               },
                               child: Text("Add_event")),
                           Expanded(child: SizedBox())

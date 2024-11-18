@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/views/dashboard.dart';
+
+import 'package:flutter_application_1/views/dashboard_screen.dart';
 
 import 'package:get/get.dart';
 
@@ -11,6 +12,7 @@ class Login_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 55, 64, 146),
       body: Center(
         child: Container(
           child: Column(
@@ -19,19 +21,28 @@ class Login_page extends StatelessWidget {
               Container(
                 child: Text(
                   'P',
-                  style: TextStyle(fontSize: 99, fontWeight: FontWeight.w600),
+                  style: TextStyle(
+                      fontSize: 99,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white),
                 ),
               ),
               Container(
                 child: Text(
                   'Plant your self',
-                  style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
                 ),
               ),
               Container(
                 child: Text(
                   'Organize your time more efficiently',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.white),
                 ),
               ),
               SizedBox(
@@ -41,7 +52,7 @@ class Login_page extends StatelessWidget {
                 width: 300,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.amber,
+                  color: Color.fromARGB(178, 177, 177, 177),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -55,9 +66,9 @@ class Login_page extends StatelessWidget {
                         child: TextField(
                           obscureText: false,
                           decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'User',
-                          ),
+                              border: OutlineInputBorder(),
+                              labelText: 'User',
+                              labelStyle: TextStyle(color: Colors.white)),
                         ),
                       ),
                       SizedBox(
@@ -70,6 +81,7 @@ class Login_page extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: 'Password',
+                            labelStyle: TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
@@ -89,7 +101,7 @@ class Login_page extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Get.to(Dashboard_Page());
+                          Get.to(DashboardScreen());
                         },
                         child: Container(
                           height: 50,

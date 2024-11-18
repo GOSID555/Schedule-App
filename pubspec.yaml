@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.6
   dio: ^5.7.0
   syncfusion_flutter_calendar: ^27.2.2
+  table_calendar: ^3.1.2
 
 dev_dependencies:
   flutter_test:

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import 'controllers/appointment_controller.dart';
 import 'views/get_started.dart';
 
 void main() {
+  Get.put(AppointmentController());
   runApp(const MyApp());
 }
 

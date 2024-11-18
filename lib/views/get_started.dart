@@ -10,6 +10,7 @@ class GetStarted extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 55, 64, 146),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -17,7 +18,10 @@ class GetStarted extends StatelessWidget {
             child: Container(
               child: Text(
                 'P',
-                style: TextStyle(fontSize: 99, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    fontSize: 99,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white),
               ),
             ),
           ),
@@ -27,13 +31,19 @@ class GetStarted extends StatelessWidget {
           Container(
             child: Text(
               'Plant your self',
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           ),
           Container(
             child: Text(
               'Organize your time more efficiently',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.white),
             ),
           ),
           SizedBox(
