@@ -86,7 +86,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       child: ListTile(
                         title: Text(appointment['title'] ?? ''),
                         subtitle: Text(
-                          'Date: ${appointment['date'] ?? ''} | Time: ${appointment['time'] ?? ''}',
+                          'Date: ${appointment['date'] ?? ''} | Time: ${appointment['time'] ?? ''}"\n Description: ${appointment['des'] ?? ''}',
                         ),
                       ),
                     );

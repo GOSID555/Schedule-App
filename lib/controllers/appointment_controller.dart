@@ -9,26 +9,30 @@ class AppointmentController extends GetxController {
   var title = ''.obs;
   var date = ''.obs;
   var time = ''.obs;
+  var des = ''.obs;
 
   // TextEditingController for form fields
   TextEditingController titleController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
   TextEditingController dateController = TextEditingController();
   TextEditingController timeController = TextEditingController();
 
   void saveAppointment() {
     if (titleController.text.isNotEmpty &&
+        descriptionController.text.isNotEmpty &&
         dateController.text.isNotEmpty &&
         timeController.text.isNotEmpty) {
       // Add a new appointment to the list
       appointments.add({
         'title': titleController.text,
+        'des': descriptionController.text,
         'date': dateController.text,
         'time': timeController.text,
       });
 
       // Print to console for verification
       print(
-          "Appointment saved: Title - ${titleController.text}, Date - ${dateController.text}, Time - ${timeController.text}");
+          "Appointment saved: Title - ${titleController.text},des - ${descriptionController.text}, Date - ${dateController.text}, Time - ${timeController.text}");
 
       // Show a success snackbar
       Get.snackbar('Success', 'Appointment saved successfully');
@@ -52,9 +56,11 @@ class AppointmentController extends GetxController {
 
   void clearFields() {
     titleController.clear();
+    descriptionController.clear();
     dateController.clear();
     timeController.clear();
     title.value = '';
+    des.value = '';
     date.value = '';
     time.value = '';
   }
