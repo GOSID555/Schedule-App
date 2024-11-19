@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: const GetMaterialApp(
+        debugShowCheckedModeBanner: false,
         home: GetStarted(),
       ),
     );

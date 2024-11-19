@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/appointment_controller.dart';
+import 'test.dart';
 
 class AddAppointmentScreen extends StatelessWidget {
   final AppointmentController controller = Get.put(AppointmentController());
@@ -17,12 +18,35 @@ class AddAppointmentScreen extends StatelessWidget {
           children: [
             TextField(
               controller: controller.titleController,
-              decoration: InputDecoration(labelText: 'Title'),
+              decoration: InputDecoration(
+                labelText: 'Title',
+                enabledBorder: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(width: 2, color: Colors.grey), //<-- SEE HERE
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 2, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(50)),
+              ),
               onChanged: (value) => controller.title.value = value,
+            ),
+            SizedBox(
+              height: 20,
             ),
             TextField(
               controller: controller.dateController,
-              decoration: InputDecoration(labelText: 'Date'),
+              decoration: InputDecoration(
+                labelText: 'Date',
+                enabledBorder: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(width: 2, color: Colors.grey), //<-- SEE HERE
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 2, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(50)),
+              ),
               onChanged: (value) => controller.date.value = value,
               onTap: () async {
                 DateTime? pickedDate = await showDatePicker(
@@ -37,9 +61,22 @@ class AddAppointmentScreen extends StatelessWidget {
                 }
               },
             ),
+            SizedBox(
+              height: 20,
+            ),
             TextField(
               controller: controller.timeController,
-              decoration: InputDecoration(labelText: 'Time'),
+              decoration: InputDecoration(
+                labelText: 'Time',
+                enabledBorder: OutlineInputBorder(
+                  borderSide:
+                      BorderSide(width: 2, color: Colors.grey), //<-- SEE HERE
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 2, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(50)),
+              ),
               onChanged: (value) => controller.time.value = value,
               onTap: () async {
                 TimeOfDay? pickedTime = await showTimePicker(
@@ -56,6 +93,52 @@ class AddAppointmentScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: controller.saveAppointment,
               child: Text('Save Appointment'),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: Container(
+                    width: 150,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: Center(
+                      child:
+                          Text('Cancel', style: TextStyle(color: Colors.white)),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 50,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    controller.saveAppointment();
+                  },
+                  child: Container(
+                    width: 150,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 55, 64, 146),
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Save',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

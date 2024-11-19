@@ -13,11 +13,14 @@ class Login_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 55, 64, 146),
-      body: Center(
-        child: Container(
+      body: SingleChildScrollView(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 50,
+              ),
               Container(
                 child: Text(
                   'P',
@@ -52,7 +55,7 @@ class Login_page extends StatelessWidget {
                 width: 300,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(178, 177, 177, 177),
+                  color: Color.fromARGB(177, 211, 210, 210),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -66,9 +69,23 @@ class Login_page extends StatelessWidget {
                         child: TextField(
                           obscureText: false,
                           decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'User',
-                              labelStyle: TextStyle(color: Colors.white)),
+                            filled: false,
+                            border: OutlineInputBorder(),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.grey.shade300,
+                                  width:
+                                      2.0), // Border color when field is enabled
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.white,
+                                  width:
+                                      2.0), // Border color when the field is focused
+                            ),
+                            labelText: 'User',
+                            labelStyle: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -82,6 +99,18 @@ class Login_page extends StatelessWidget {
                             border: OutlineInputBorder(),
                             labelText: 'Password',
                             labelStyle: TextStyle(color: Colors.white),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.grey.shade300,
+                                  width:
+                                      2.0), // Border color when field is enabled
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.white,
+                                  width:
+                                      2.0), // Border color when the field is focused
+                            ),
                           ),
                         ),
                       ),
@@ -133,7 +162,7 @@ class Login_page extends StatelessWidget {
                             },
                             child: Text(
                               'Sign Up',
-                              style: TextStyle(color: Colors.blueAccent),
+                              style: TextStyle(color: Colors.white),
                             ),
                           )
                         ],
