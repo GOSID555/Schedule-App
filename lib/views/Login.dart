@@ -55,7 +55,7 @@ class Login_page extends StatelessWidget {
                 width: 300,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(177, 211, 210, 210),
+                  color: Color.fromARGB(255, 201, 201, 201),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -72,19 +72,22 @@ class Login_page extends StatelessWidget {
                             filled: false,
                             border: OutlineInputBorder(),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Colors.grey.shade300,
-                                  width:
-                                      2.0), // Border color when field is enabled
-                            ),
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 55, 64, 146),
+                                    width: 2.0),
+                                borderRadius: BorderRadius.circular(
+                                    15) // Border color when field is enabled
+                                ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Colors.white,
-                                  width:
-                                      2.0), // Border color when the field is focused
-                            ),
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 55, 64, 146),
+                                    width: 2.0),
+                                borderRadius: BorderRadius.circular(
+                                    15) // Border color when the field is focused
+                                ),
                             labelText: 'User',
-                            labelStyle: TextStyle(color: Colors.white),
+                            labelStyle: TextStyle(
+                                color: const Color.fromARGB(255, 99, 99, 99)),
                           ),
                         ),
                       ),
@@ -98,19 +101,22 @@ class Login_page extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: 'Password',
-                            labelStyle: TextStyle(color: Colors.white),
+                            labelStyle: TextStyle(
+                                color: const Color.fromARGB(255, 99, 99, 99)),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Colors.grey.shade300,
-                                  width:
-                                      2.0), // Border color when field is enabled
-                            ),
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 55, 64, 146),
+                                    width: 2.0),
+                                borderRadius: BorderRadius.circular(
+                                    15) // Border color when field is enabled
+                                ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Colors.white,
-                                  width:
-                                      2.0), // Border color when the field is focused
-                            ),
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 55, 64, 146),
+                                    width: 2.0),
+                                borderRadius: BorderRadius.circular(
+                                    15) // Border color when the field is focused
+                                ),
                           ),
                         ),
                       ),

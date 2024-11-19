@@ -23,11 +23,11 @@ class AddAppointmentScreen extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(
                     borderSide:
                         BorderSide(width: 2, color: Colors.grey), //<-- SEE HERE
-                    borderRadius: BorderRadius.circular(50.0),
+                    borderRadius: BorderRadius.circular(20.0),
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.grey),
-                      borderRadius: BorderRadius.circular(50)),
+                      borderRadius: BorderRadius.circular(20)),
                 ),
                 onChanged: (value) => controller.title.value = value,
               ),
@@ -42,11 +42,11 @@ class AddAppointmentScreen extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(
                     borderSide:
                         BorderSide(width: 2, color: Colors.grey), //<-- SEE HERE
-                    borderRadius: BorderRadius.circular(50.0),
+                    borderRadius: BorderRadius.circular(20.0),
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.grey),
-                      borderRadius: BorderRadius.circular(50)),
+                      borderRadius: BorderRadius.circular(20)),
                   contentPadding:
                       EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
                 ),
@@ -62,11 +62,11 @@ class AddAppointmentScreen extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(
                     borderSide:
                         BorderSide(width: 2, color: Colors.grey), //<-- SEE HERE
-                    borderRadius: BorderRadius.circular(50.0),
+                    borderRadius: BorderRadius.circular(20.0),
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.grey),
-                      borderRadius: BorderRadius.circular(50)),
+                      borderRadius: BorderRadius.circular(20)),
                 ),
                 onChanged: (value) => controller.date.value = value,
                 onTap: () async {
@@ -92,11 +92,11 @@ class AddAppointmentScreen extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(
                     borderSide:
                         BorderSide(width: 2, color: Colors.grey), //<-- SEE HERE
-                    borderRadius: BorderRadius.circular(50.0),
+                    borderRadius: BorderRadius.circular(20.0),
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.grey),
-                      borderRadius: BorderRadius.circular(50)),
+                      borderRadius: BorderRadius.circular(20)),
                 ),
                 onChanged: (value) => controller.time.value = value,
                 onTap: () async {
